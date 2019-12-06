@@ -12,6 +12,9 @@
 ;; Completa o fechamento de tags automaticamente: ), ], }, ", etc.
 (electric-pair-mode 1)
 
+;; Manda os arquivos para a lixeira quando forem excluídos com o Dired
+(setq delete-by-moving-to-trash t)
+
 
 (provide 'config-emacs)
 
