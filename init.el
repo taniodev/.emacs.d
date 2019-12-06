@@ -17,8 +17,7 @@
 ;; Carrega as configurações dos pacotes instalados
 (require 'config-pacotes)
 
-
-;; Atalhos de tecla personalizados
-(global-set-key (kbd "C-<tab>") 'elpy-company-backend)
+;; Carrega configurações de teclado
+(require 'config-teclado)
 
 
