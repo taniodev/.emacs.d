@@ -6,8 +6,11 @@
 ;; Inicializa o elpy automaticamente
 (elpy-enable)
 
-;; Utiliza o interpretador Python definido pelo Pyenv
+;; Adiciona o diretório do Pyenv contendo o interpretador Python no path do Emacs
 (add-to-list 'exec-path "~/.pyenv/shims")
+
+;; Utiliza o ambiente global do interpretador definido com o pyenv
+(setq elpy-rpc-virtualenv-path "~/.pyenv/versions")
 
 
 (provide 'config-pacotes)
