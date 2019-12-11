@@ -14,10 +14,10 @@
 ;; Instala os pacotes ausentes
 (require 'instalacao-automatica)
 
-;; Carrega as configurações dos pacotes instalados
-(require 'config-pacotes)
-
-;; Carrega configurações de teclado
+;; Carrega as configurações de teclado
 (require 'config-teclado)
+
+;; Carrega as configurações do Elpy
+(require 'config-elpy)
 
 

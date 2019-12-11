@@ -1,6 +1,5 @@
 ;; Configurações de teclado
 
-
 ;; Número correspondente a tecla ALT-GR do teclado (keycode)
 (setq altgr-keycode "108")
 
@@ -29,9 +28,6 @@
 
 ;; M-F12 para voltar Alt-GR ao normal
 (global-set-key (kbd "M-<f12>") 'ctrl-altgr)
-
-;; C-TAB para chamar a sugestão de código no elpy
-(global-set-key (kbd "C-<tab>") 'elpy-company-backend)
 
 
 (provide 'config-teclado)
