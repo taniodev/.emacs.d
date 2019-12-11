@@ -17,6 +17,9 @@
 ;; Carrega as configurações de teclado
 (require 'config-teclado)
 
+;; Configurações do Dired
+(require 'config-dired)
+
 ;; Carrega as configurações do Elpy
 (require 'config-elpy)
 
