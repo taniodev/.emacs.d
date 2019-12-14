@@ -12,8 +12,31 @@
 ;; Completa o fechamento de tags automaticamente: ), ], }, ", etc.
 (electric-pair-mode 1)
 
-;; Manda os arquivos para a lixeira quando forem excluídos com o Dired
-(setq delete-by-moving-to-trash t)
+
+;; Atalhos de teclado
+;; Alt+HOME - Pular a indentação no início da linha
+(global-set-key (kbd "M-<home>") 'back-to-indentation)
+
+;; Ctrl+Shift+s - Salvar o buffer aberto
+(global-set-key (kbd "C-S-s") 'save-buffer)
+
+;; Ctrl+Shift+x - Recortar
+(global-set-key (kbd "C-S-x") 'kill-region)
+
+;; Ctrl+Shift+c - Copiar
+(global-set-key (kbd "C-S-c") 'kill-ring-save)
+
+;; Ctrl+Shift+v - Colar
+(global-set-key (kbd "C-S-v") 'yank)
+
+;; F5 - Compilar
+(global-set-key (kbd "<f5>") 'compile)
+
+;; Ctrl+Shift+F5 - Recompilar
+(global-set-key (kbd "C-S-<f5>") 'recompile)
+
+;; Shift+F5 - Parar o processo de compilação
+(global-set-key (kbd "S-<f5>") 'kill-compilation)
 
 
 (provide 'config-emacs)
