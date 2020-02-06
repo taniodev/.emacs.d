@@ -23,4 +23,7 @@
 ;; Carrega as configurações do Elpy
 (require 'config-elpy)
 
+;; Carrega as configurações do Magit
+(require 'config-magit)
+
 
