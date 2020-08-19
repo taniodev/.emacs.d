@@ -3,6 +3,10 @@
 (add-hook 'elpy-mode-hook
   (lambda()
 
+    ;; Define o Pytest como test runner padrão
+    (setq elpy-test-runner 'elpy-test-pytest-runner)
+
+
     ;; Atalhos de teclado
     ;; Ctrl+TAB - Para chamar a sugestão de código no elpy
     (define-key elpy-mode-map (kbd "C-<tab>") 'elpy-company-backend)
