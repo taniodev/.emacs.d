@@ -1,5 +1,8 @@
 ;; Este arquivo contém configurações gerais do Emacs
 
+;; Carrega um tema
+(load-theme 'tango-dark t)
+
 ;; Desabilita a exibição da mensagem de boas-vindas
 (setq inhibit-startup-message t)
 
