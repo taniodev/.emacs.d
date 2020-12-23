@@ -3,6 +3,11 @@
 ;; Desabilita a exibição da mensagem de boas-vindas
 (setq inhibit-startup-message t)
 
+;; Remove alguns elementos da tela
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
 ;; Desabilita a criação dos arquivos de backup
 (setq make-backup-files nil)
 
