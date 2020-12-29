@@ -3,13 +3,10 @@
 (require 'config-emacspeak)
 (require 'config-emacs)
 
-
 (require 'package)
 (add-to-list 'package-archives
   '("melpa-stable" . "https://stable.melpa.org/packages/"))
 
-
-(package-initialize)
 
 ;; Instala os pacotes ausentes
 (require 'instalacao-automatica)
