@@ -22,8 +22,11 @@
 
 
 ;; Atalhos de teclado
-;; Alt+HOME - Pular a indentação no início da linha
-(global-set-key (kbd "M-<home>") 'back-to-indentation)
+;; HOME - Mover o cursor à indentação
+(global-set-key (kbd "<home>") 'back-to-indentation)
+
+;; Alt+HOME - Mover o cursor para o início da linha
+(global-set-key (kbd "M-<home>") 'move-beginning-of-line)
 
 ;; Ctrl+Shift+s - Salvar o buffer aberto
 (global-set-key (kbd "C-S-s") 'save-buffer)
