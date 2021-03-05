@@ -23,4 +23,7 @@
 ;; Carrega as configurações do Magit
 (require 'config-magit)
 
+;; Carrega as configurações para edição de yaml
+(require 'config-yaml)
+
 
