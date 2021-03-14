@@ -3,7 +3,7 @@
 
 ;; Lista de pacotes que serão instalados
 (setq lista-de-pacotes
-  '(elpy yaml-mode)
+  '(elpy)
 )
 
 
