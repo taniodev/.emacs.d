@@ -12,17 +12,17 @@
   (package-install 'use-package))
 
 
-;; Instala os pacotes ausentes
-(require 'instalacao-automatica)
-
 ;; Carrega as configurações de teclado
 (require 'config-teclado)
+
+;; Configurações do company-mode
+(require 'config-company)
 
 ;; Configurações do Dired
 (require 'config-dired)
 
 ;; Carrega as configurações do Elpy
-(require 'config-elpy)
+;; (require 'config-elpy)
 
 ;; Carrega as configurações do Magit
 (require 'config-magit)
