@@ -24,8 +24,14 @@
 ;; Carrega as configurações do Elpy
 ;; (require 'config-elpy)
 
+;; Configurações do lsp-mode
+(require 'config-lsp)
+
 ;; Carrega as configurações do Magit
 (require 'config-magit)
+
+;; Configurações para programação em Python
+(require 'config-python)
 
 ;; Carrega as configurações para edição de yaml
 (require 'config-yaml)
