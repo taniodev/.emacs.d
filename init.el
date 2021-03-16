@@ -24,6 +24,9 @@
 ;; Carrega as configurações do Elpy
 ;; (require 'config-elpy)
 
+;; Verificação de sintaxe
+(require 'config-flycheck)
+
 ;; Configurações do lsp-mode
 (require 'config-lsp)
 
