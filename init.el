@@ -33,6 +33,9 @@
 ;; Carrega as configurações do Magit
 (require 'config-magit)
 
+;; Navegação por níveis de indentação
+(require 'config-nav-indent)
+
 ;; Configurações para programação em Python
 (require 'config-python)
 
