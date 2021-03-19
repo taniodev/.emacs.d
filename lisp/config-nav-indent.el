@@ -9,6 +9,9 @@
 ;; Control+Seta para a direita - Navega para o próximo nível (Filho)
 (global-set-key (kbd "C-<right>") 'nav-next-level)
 
+;; Control+Seta para a esquerda - Navega para o nível anterior (Pai)
+(global-set-key (kbd "C-<left>") 'nav-previous-level)
+
 
 (defun notify-with-emacspeak ()
   (emacspeak-auditory-icon 'large-movement)
@@ -59,6 +62,24 @@
     )   ;; Fim while
 
     (when (<= (current-indentation) initial-indentation)
+      (goto-char point-start))
+  )   ;; Fim let
+  (notify-with-emacspeak)
+)
+
+(defun nav-previous-level ()
+  "Navega para a linha do nível pai"
+  (interactive)
+  (let ((initial-indentation (current-indentation)) (point-start (point)))
+    (previous-line)
+    (back-to-indentation)
+
+    (while (or (and (>= (current-indentation) initial-indentation) (not (equal (char-before) nil))) (and (eolp) (not (equal (char-before) nil))))
+      (previous-line)
+      (back-to-indentation)
+    )   ;; Fim while
+
+    (when (equal (char-before) nil)
       (goto-char point-start))
   )   ;; Fim let
   (notify-with-emacspeak)
