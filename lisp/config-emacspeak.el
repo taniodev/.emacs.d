@@ -1,11 +1,14 @@
 ;; Configurações do emacspeak
 
 (add-hook 'emacspeak-startup-hook
-  (lambda()
+  (lambda ()
 
     ;; Configurações de voz
     (dtk-set-language "pt-br")
     (dtk-set-rate 410 1)
+
+    ;; Tema de som
+    (emacspeak-sounds-select-theme "3d/")
 
 
     ;; Atalhos de teclado
