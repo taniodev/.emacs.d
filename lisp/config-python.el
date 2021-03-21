@@ -1,7 +1,11 @@
 ;; Configurações para desenvolvimento em Python
 
-;; Atalhos de tecla
+
 (add-hook 'python-mode-hook '(lambda ()
+  ;; Desativa o anúncio automático do buffer Messages
+  (setq-local emacspeak-speak-messages nil)
+
+  ;; Atalhos de tecla
   ;; Ativar o ambiente virtual
   (define-key python-mode-map (kbd "C-S-a v") 'pyvenv-activate)
 
