@@ -42,4 +42,7 @@
 ;; Carrega as configurações para edição de yaml
 (require 'config-yaml)
 
+;; Snippets
+(require 'config-yasnippet)
+
 
