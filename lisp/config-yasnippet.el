@@ -6,6 +6,7 @@
   (yas-reload-all)
   :hook
   (python-mode . yas-minor-mode)
+  (html-mode . yas-minor-mode)
 )
 
 (use-package yasnippet-snippets

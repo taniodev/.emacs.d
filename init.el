@@ -39,6 +39,9 @@
 ;; Configurações para programação em Python
 (require 'config-python)
 
+;; Tecnologias web
+(require 'config-web)
+
 ;; Carrega as configurações para edição de yaml
 (require 'config-yaml)
 
