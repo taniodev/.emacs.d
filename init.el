@@ -36,6 +36,9 @@
 ;; Navegação por níveis de indentação
 (require 'config-nav-indent)
 
+;; Trabalhar com muitos projetos
+(require 'config-projectile)
+
 ;; Configurações para programação em Python
 (require 'config-python)
 
