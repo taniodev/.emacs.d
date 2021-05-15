@@ -49,6 +49,11 @@
 ;; Shift+F5 - Parar o processo de compilação
 (global-set-key (kbd "S-<f5>") 'kill-compilation)
 
+;; Alt+Shift+u - Converter a palavra em letras minúsculas
+;; Nota: M-S-u não funcionou.
+(global-unset-key (kbd "M-l"))
+(global-set-key (kbd "M-U") 'downcase-word)
+
 
 (provide 'config-emacs)
 
