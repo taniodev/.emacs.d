@@ -40,14 +40,14 @@
 ;; Ctrl+Shift+v - Colar
 (global-set-key (kbd "C-S-v") 'yank)
 
-;; F5 - Compilar
-(global-set-key (kbd "<f5>") 'compile)
+;; F6 - Compilar
+(global-set-key (kbd "<f6>") 'compile)
 
-;; Ctrl+Shift+F5 - Recompilar
-(global-set-key (kbd "C-S-<f5>") 'recompile)
+;; Ctrl+Shift+F6 - Recompilar
+(global-set-key (kbd "C-S-<f6>") 'recompile)
 
-;; Shift+F5 - Parar o processo de compilação
-(global-set-key (kbd "S-<f5>") 'kill-compilation)
+;; Shift+F6 - Parar o processo de compilação
+(global-set-key (kbd "S-<f6>") 'kill-compilation)
 
 ;; Alt+Shift+u - Converter a palavra em letras minúsculas
 ;; Nota: M-S-u não funcionou.

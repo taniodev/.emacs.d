@@ -3,5 +3,6 @@ elpa/
 elpy/
 snippets/
 transient/
+.dap-breakpoints
 .lsp-session-v1
 projectile-bookmarks.eld

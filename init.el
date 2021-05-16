@@ -18,6 +18,9 @@
 ;; Configurações do company-mode
 (require 'config-company)
 
+;; Configurações de debug (dap-mode)
+(require 'config-dap)
+
 ;; Configurações do Dired
 (require 'config-dired)
 
