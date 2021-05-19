@@ -8,4 +8,11 @@
   (projectile-mode 1)
 )
 
+(use-package flx-ido
+  :ensure t
+  :init
+  (ido-mode 1)
+  (flx-ido-mode 1)
+)
+
 (provide 'config-projectile)

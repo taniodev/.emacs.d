@@ -5,4 +5,5 @@ snippets/
 transient/
 .dap-breakpoints
 .lsp-session-v1
+ido.last
 projectile-bookmarks.eld
