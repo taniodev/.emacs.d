@@ -6,4 +6,5 @@ transient/
 .dap-breakpoints
 .lsp-session-v1
 ido.last
+projectile.cache
 projectile-bookmarks.eld
