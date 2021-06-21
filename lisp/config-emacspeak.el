@@ -1,11 +1,10 @@
 ;; Configurações do emacspeak
 
-(add-hook 'emacspeak-startup-hook
-  (lambda ()
-
+(defun configurar-emacspeak ()
     ;; Configurações de voz
     (dtk-set-language "pt-br")
-    (dtk-set-rate 410 1)
+    (dtk-set-rate 400 t)
+    (dtk-toggle-split-caps t)
 
     ;; Tema de som
     (emacspeak-sounds-select-theme "3d/")
@@ -20,10 +19,10 @@
 
     ;; C-PageDown para alternar ao próximo buffer que está aberto no mesmo modo
     (global-set-key (kbd "C-<next>") 'emacspeak-wizards-cycle-to-next-buffer)
-
-))
+)
 
 
 (load-file "/opt/emacspeak/lisp/emacspeak-setup.el")
+(with-eval-after-load "emacspeak" (configurar-emacspeak))
 (provide 'config-emacspeak)
 
