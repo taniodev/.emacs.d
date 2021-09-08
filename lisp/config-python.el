@@ -10,10 +10,23 @@
   (define-key python-mode-map (kbd "C-S-a v") 'pyvenv-activate)
 
   ;; Rodar todos os testes
-  (define-key python-mode-map (kbd "C-S-a r") 'python-rodar-testes)
+  (define-key python-mode-map (kbd "C-S-a r") 'python-pytest)
 
-  ;; Rodar os testes do buffer atual
-  (define-key python-mode-map (kbd "C-S-a t") 'python-rodar-testes-buffer)
+  ;; Rodar os testes que correspondem ao buffer atual
+  (define-key python-mode-map (kbd "C-S-a f") 'python-pytest-file-dwim)
+
+  ;; Rodar uma função de teste que corresponde à posição do cursor
+  (define-key python-mode-map (kbd "C-S-a t") 'python-pytest-function-dwim)
+
+  ;; Repetir o último comando utilizado para a execução dos testes
+  (define-key python-mode-map (kbd "C-S-a C-S-r") 'python-pytest-repeat)
+
+  ;; Abrir o buffer que contém o log de execução do pytest
+  (define-key python-mode-map (kbd "C-S-a e") '(lambda ()
+    (interactive)
+    (switch-to-buffer python-pytest-buffer-name)
+    (emacspeak-auditory-icon 'select-object)
+    (emacspeak-speak-mode-line)))
 ))
 
 
@@ -29,21 +42,16 @@
   :hook (python-mode . pyvenv-mode)
 )
 
-
-;; Funções para rodar testes
-(setq python-rodar-testes-cmd "pytest")
-(setq python-rodar-testes-args "-s")
-
-(defun python-rodar-testes ()
-  "Rodar todos os testes"
-  (interactive)
-  (compile (concat python-rodar-testes-cmd " " python-rodar-testes-args))
+(use-package python-pytest
+  :ensure t
+  :custom
+  (python-pytest-project-name-in-buffer-name nil)
 )
 
-(defun python-rodar-testes-buffer ()
-  "Rodar todos os testes do buffer atual"
-  (interactive)
-  (compile (concat python-rodar-testes-cmd " " (buffer-file-name) " " python-rodar-testes-args))
-)
+(add-hook 'python-pytest-finished-hook '(lambda ()
+  "Utilize o Emacspeak para anunciar o resultado do processo de execução dos testes."
+  (previous-line)   ;; Ao concluir o processo, o cursor fica posicionado na última linha do buffer (em branco).
+  (emacspeak-speak-line)
+  (emacspeak-auditory-icon 'task-done)))
 
 (provide 'config-python)
