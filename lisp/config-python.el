@@ -6,9 +6,6 @@
   (setq-local emacspeak-speak-messages nil)
 
   ;; Atalhos de tecla
-  ;; Ativar o ambiente virtual
-  (define-key python-mode-map (kbd "C-S-a v") 'pyvenv-activate)
-
   ;; Rodar todos os testes
   (define-key python-mode-map (kbd "C-S-a r") 'python-pytest)
 
@@ -37,9 +34,10 @@
     (lsp-deferred)))
 )
 
-(use-package pyvenv
+(use-package auto-virtualenv
+  ;; Possibilita a ativação automática do ambiente virtual (.venv).
   :ensure t
-  :hook (python-mode . pyvenv-mode)
+  :hook (python-mode . auto-virtualenv-set-virtualenv)
 )
 
 (use-package python-pytest
