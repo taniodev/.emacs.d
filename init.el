@@ -24,9 +24,6 @@
 ;; Configurações do Dired
 (require 'config-dired)
 
-;; Carrega as configurações do Elpy
-;; (require 'config-elpy)
-
 ;; Verificação de sintaxe
 (require 'config-flycheck)
 
