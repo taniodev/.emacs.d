@@ -12,9 +12,6 @@
   (package-install 'use-package))
 
 
-;; Carrega as configurações de teclado
-(require 'config-teclado)
-
 ;; Configurações do company-mode
 (require 'config-company)
 
