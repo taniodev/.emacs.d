@@ -15,6 +15,7 @@
   ("S-<f5>" . dap-disconnect)   ;; Parar
   ("<f9>" . dap-breakpoint-toggle)   ;; Adicionar ou remover breakpoint
   ("S-<f9>" . dap-breakpoint-delete-all)   ;; Remover todos os breakpoints
+  ("C-<f9>" . dap-breakpoint-condition)   ;; Breakpoint condicional
   ("<f10>" . dap-next)   ;; Avançar
   ("<f11>" . dap-step-in)   ;; Entrar
   ("S-<f11>" . dap-step-out)   ;; Sair
