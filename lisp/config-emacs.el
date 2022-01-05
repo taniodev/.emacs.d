@@ -21,7 +21,25 @@
 (electric-pair-mode 1)
 
 
-;; Atalhos de teclado
+;; Configurações do Dired
+;; Manda os arquivos para a lixeira quando forem excluídos
+(setq delete-by-moving-to-trash t)
+
+;; Mostrar primeiro os diretórios
+(setq dired-listing-switches "-lA --group-directories-first")
+
+(add-hook 'dired-mode-hook
+  (lambda()
+    ;; Atalhos de teclado
+    ;; CTRL+d para desmarcar um arquivo da exclusão
+    (local-set-key (kbd "C-d") 'dired-unmark-backward)
+
+    ;; Backspace para voltar ao diretório anterior
+    (local-set-key (kbd "<backspace>") 'dired-up-directory)
+))
+
+
+;; Atalhos globais de teclado
 ;; HOME - Mover o cursor à indentação
 (global-set-key (kbd "<home>") 'back-to-indentation)
 

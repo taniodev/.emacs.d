@@ -18,9 +18,6 @@
 ;; Configurações de debug (dap-mode)
 (require 'config-dap)
 
-;; Configurações do Dired
-(require 'config-dired)
-
 ;; Verificação de sintaxe
 (require 'config-flycheck)
 
