@@ -29,6 +29,8 @@
 
 (use-package lsp-pyright
   :ensure t
+  :config
+  (setq lsp-pyright-disable-organize-imports t)
   :hook (python-mode . (lambda ()
     (require 'lsp-pyright)
     (lsp-deferred)))
