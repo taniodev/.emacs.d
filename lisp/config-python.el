@@ -42,6 +42,12 @@
   :hook (python-mode . auto-virtualenv-set-virtualenv)
 )
 
+(use-package py-isort
+  ;; Organizar os imports automaticamente
+  :ensure t
+  :hook (before-save . py-isort-before-save)
+)
+
 (use-package python-pytest
   :ensure t
   :custom
