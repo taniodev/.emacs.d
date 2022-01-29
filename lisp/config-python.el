@@ -52,12 +52,13 @@
   :ensure t
   :custom
   (python-pytest-project-name-in-buffer-name nil)
+  :hook (python-pytest-finished . (lambda ()
+    "Utilize o Emacspeak para anunciar o resultado do processo de execução dos testes."
+    (end-of-buffer)
+    (while (not (search-forward "=== " (line-end-position) t))
+      (previous-line))
+    (emacspeak-speak-line)
+    (emacspeak-auditory-icon 'task-done)))
 )
-
-(add-hook 'python-pytest-finished-hook '(lambda ()
-  "Utilize o Emacspeak para anunciar o resultado do processo de execução dos testes."
-  (previous-line)   ;; Ao concluir o processo, o cursor fica posicionado na última linha do buffer (em branco).
-  (emacspeak-speak-line)
-  (emacspeak-auditory-icon 'task-done)))
 
 (provide 'config-python)
