@@ -29,11 +29,10 @@
 
 (use-package lsp-pyright
   :ensure t
-  :config
-  (setq lsp-pyright-disable-organize-imports t)
-  :hook (python-mode . (lambda ()
-    (require 'lsp-pyright)
-    (lsp-deferred)))
+  :after (python)
+  :custom
+  (lsp-pyright-disable-organize-imports t)
+  :config (lsp-deferred)
 )
 
 (use-package auto-virtualenv
@@ -50,6 +49,7 @@
 
 (use-package python-pytest
   :ensure t
+  :after (auto-virtualenv)
   :custom
   (python-pytest-project-name-in-buffer-name nil)
   :hook (python-pytest-finished . (lambda ()

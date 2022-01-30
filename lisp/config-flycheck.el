@@ -2,7 +2,7 @@
 
 (use-package flycheck
   :ensure t
-  :init (global-flycheck-mode)
+  :hook (python-mode . flycheck-mode)
 
   :bind
   ;; F8 - Ir para o próximo erro ou aviso

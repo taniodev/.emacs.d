@@ -10,6 +10,7 @@
 )
 
 (use-package yasnippet-snippets
-  :ensure t)
+  :ensure t
+  :after (yasnippet))
 
 (provide 'config-yasnippet)
