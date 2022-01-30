@@ -28,7 +28,7 @@
 (require 'config-magit)
 
 ;; Navegação por níveis de indentação
-(require 'config-nav-indent)
+(require 'config-navindent)
 
 ;; Trabalhar com muitos projetos
 (require 'config-projectile)
