@@ -4,26 +4,6 @@
 (add-hook 'python-mode-hook '(lambda ()
   ;; Desativa o anúncio automático do buffer Messages
   (setq-local emacspeak-speak-messages nil)
-
-  ;; Atalhos de tecla
-  ;; Rodar todos os testes
-  (define-key python-mode-map (kbd "C-S-a r") 'python-pytest)
-
-  ;; Rodar os testes que correspondem ao buffer atual
-  (define-key python-mode-map (kbd "C-S-a f") 'python-pytest-file-dwim)
-
-  ;; Rodar uma função de teste que corresponde à posição do cursor
-  (define-key python-mode-map (kbd "C-S-a t") 'python-pytest-function-dwim)
-
-  ;; Repetir o último comando utilizado para a execução dos testes
-  (define-key python-mode-map (kbd "C-S-a C-S-r") 'python-pytest-repeat)
-
-  ;; Abrir o buffer que contém o log de execução do pytest
-  (define-key python-mode-map (kbd "C-S-a e") '(lambda ()
-    (interactive)
-    (switch-to-buffer python-pytest-buffer-name)
-    (emacspeak-auditory-icon 'select-object)
-    (emacspeak-speak-mode-line)))
 ))
 
 
@@ -59,6 +39,18 @@
       (previous-line))
     (emacspeak-speak-line)
     (emacspeak-auditory-icon 'task-done)))
+
+  :bind
+  ("C-S-a r" . python-pytest)   ;; Rodar todos os testes
+  ("C-S-a f" . python-pytest-file-dwim)   ;; Rodar os testes que correspondem ao buffer atual
+  ("C-S-a t" . python-pytest-function-dwim)   ;; Rodar uma função de teste que corresponde à posição do cursor
+  ("C-S-a C-S-r" . python-pytest-repeat)   ;; Repetir o último comando utilizado para a execução dos testes
+  ;; Abrir o buffer que contém o log de execução do pytest
+  ("C-S-a e" . (lambda ()
+    (interactive)
+    (switch-to-buffer python-pytest-buffer-name)
+    (emacspeak-auditory-icon 'select-object)
+    (emacspeak-speak-mode-line)))
 )
 
 (provide 'config-python)
