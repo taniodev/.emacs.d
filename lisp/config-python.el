@@ -35,7 +35,7 @@
   :hook (python-pytest-finished . (lambda ()
     "Utilize o Emacspeak para anunciar o resultado do processo de execução dos testes."
     (end-of-buffer)
-    (while (not (search-forward "=== " (line-end-position) t))
+    (while (and (not (bobp)) (not (search-forward "=== " (line-end-position) t)))
       (previous-line))
     (emacspeak-speak-line)
     (emacspeak-auditory-icon 'task-done)))
