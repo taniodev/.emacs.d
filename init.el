@@ -12,37 +12,17 @@
   (package-install 'use-package))
 
 
-;; Configurações do company-mode
 (require 'config-company)
-
-;; Configurações de debug (dap-mode)
 (require 'config-dap)
-
-;; Verificação de sintaxe
 (require 'config-flycheck)
-
-;; Configurações do lsp-mode
 (require 'config-lsp)
-
-;; Carrega as configurações do Magit
 (require 'config-magit)
-
-;; Navegação por níveis de indentação
 (require 'config-navindent)
-
-;; Trabalhar com muitos projetos
 (require 'config-projectile)
-
-;; Configurações para programação em Python
-(require 'config-python)
-
-;; Tecnologias web
-(require 'config-web)
-
-;; Carrega as configurações para edição de yaml
-(require 'config-yaml)
-
-;; Snippets
 (require 'config-yasnippet)
+
+(require 'config-python)
+(require 'config-web)
+(require 'config-yaml)
 
 
