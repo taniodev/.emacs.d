@@ -27,6 +27,15 @@
   :hook (before-save . py-isort-before-save)
 )
 
+(use-package python-black
+  ;; Formatador automático
+  :ensure t
+  :after python
+  :custom
+  (python-black-command "blue")
+  :hook (python-mode . python-black-on-save-mode)
+)
+
 (use-package python-pytest
   :ensure t
   :after (auto-virtualenv)
