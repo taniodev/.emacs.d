@@ -46,6 +46,9 @@
 ;; Alt+HOME - Mover o cursor para o início da linha
 (global-set-key (kbd "M-<home>") 'move-beginning-of-line)
 
+;; Shift+Backspace - Apagar região
+(global-set-key (kbd "S-<backspace>") #'delete-region)
+
 ;; Ctrl+Shift+s - Salvar o buffer aberto
 (global-set-key (kbd "C-S-s") 'save-buffer)
 
