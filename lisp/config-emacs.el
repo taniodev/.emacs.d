@@ -11,6 +11,9 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
+;; Inicia em janela maximizada
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Desabilita a criação dos arquivos de backup
 (setq make-backup-files nil)
 
