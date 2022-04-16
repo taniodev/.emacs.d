@@ -31,6 +31,9 @@
 ;; Mostrar primeiro os diretórios
 (setq dired-listing-switches "-lA --group-directories-first")
 
+;; Mata o búffer atual ao acessar outro diretório
+(setq dired-kill-when-opening-new-dired-buffer t)
+
 (add-hook 'dired-mode-hook
   (lambda()
     ;; Atalhos de teclado
