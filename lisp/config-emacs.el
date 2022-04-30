@@ -55,6 +55,9 @@
 ;; Shift+Backspace - Apagar região
 (global-set-key (kbd "S-<backspace>") #'delete-region)
 
+;; Ctrl+Tab - Acessar outro Emacs Window
+(global-set-key (kbd "C-<tab>") 'other-window)
+
 ;; Ctrl+Shift+s - Salvar o buffer aberto
 (global-set-key (kbd "C-S-s") 'save-buffer)
 
