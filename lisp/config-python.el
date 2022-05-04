@@ -1,15 +1,18 @@
 ;; Configurações para desenvolvimento em Python
 
+(use-package python
+  :hook (python-mode . (lambda ()
+    (setq-local emacspeak-speak-messages nil)))
 
-(add-hook 'python-mode-hook '(lambda ()
-  ;; Desativa o anúncio automático do buffer Messages
-  (setq-local emacspeak-speak-messages nil)
-))
-
+  :bind
+  (:map inferior-python-mode-map
+    ("M-<up>" . comint-previous-input)
+    ("M-<down>" . comint-next-input))
+)
 
 (use-package lsp-pyright
   :ensure t
-  :after (python)
+  :after python
   :custom
   (lsp-pyright-disable-organize-imports t)
   :hook (python-mode . lsp-deferred)
@@ -38,7 +41,7 @@
 
 (use-package python-pytest
   :ensure t
-  :after (auto-virtualenv)
+  :after auto-virtualenv
   :custom
   (python-pytest-project-name-in-buffer-name nil)
   :hook (python-pytest-finished . (lambda ()
