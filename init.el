@@ -21,6 +21,8 @@
 (require 'config-projectile)
 (require 'config-yasnippet)
 
+(require 'config-spelling)
+
 (require 'config-python)
 (require 'config-web)
 (require 'config-yaml)
