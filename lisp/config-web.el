@@ -13,9 +13,6 @@
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
-
-  :hook
-  (web-mode . lsp-deferred)
 )
 
 (provide 'config-web)

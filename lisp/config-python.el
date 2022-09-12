@@ -15,7 +15,6 @@
   :after python
   :custom
   (lsp-pyright-disable-organize-imports t)
-  :hook (python-mode . lsp-deferred)
 )
 
 (use-package auto-virtualenv
