@@ -9,6 +9,10 @@
 ;; Modo principal usado no buffer *scratch* ao iniciar
 (setq initial-major-mode 'fundamental-mode)
 
+;; Conteúdo padrão presente no buffer *scratch*
+(setq initial-scratch-message
+      (format-time-string "%A, %d de %B de %Y.%n%Rh%n%n"))
+
 ;; Remove alguns elementos da tela
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
