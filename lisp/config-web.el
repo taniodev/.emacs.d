@@ -16,7 +16,6 @@
 
   :hook
   (web-mode . lsp-deferred)
-  (web-mode . yas-minor-mode)
 )
 
 (provide 'config-web)
