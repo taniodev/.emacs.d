@@ -6,6 +6,9 @@
 ;; Desabilita a exibição da mensagem de boas-vindas
 (setq inhibit-startup-message t)
 
+;; Modo principal usado no buffer *scratch* ao iniciar
+(setq initial-major-mode 'fundamental-mode)
+
 ;; Remove alguns elementos da tela
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
