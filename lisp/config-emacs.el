@@ -30,6 +30,9 @@
 ;; Completa o fechamento de tags automaticamente: ), ], }, ", etc.
 (electric-pair-mode 1)
 
+;; Indentação usando espaços
+(setq-default indent-tabs-mode nil)
+
 
 ;; Configurações do Dired
 ;; Manda os arquivos para a lixeira quando forem excluídos
