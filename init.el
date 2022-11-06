@@ -27,4 +27,6 @@
 (require 'config-web)
 (require 'config-yaml)
 
+(require 'config-my-functions)
+
 
