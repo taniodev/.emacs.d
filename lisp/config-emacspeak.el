@@ -2,7 +2,7 @@
 
 (defun configurar-emacspeak ()
     ;; Configurações de voz
-    (dtk-set-language "pt-br")
+    (dtk-set-language "pt-br:iven3")
     (dtk-set-rate 400 t)
     (dtk-toggle-split-caps t)
 
