@@ -22,7 +22,7 @@
 )
 
 
-(load-file "/opt/emacspeak/lisp/emacspeak-setup.el")
+(load-file "~/.builds/emacspeak/lisp/emacspeak-setup.el")
 (with-eval-after-load "emacspeak" (configurar-emacspeak))
 (provide 'config-emacspeak)
 
