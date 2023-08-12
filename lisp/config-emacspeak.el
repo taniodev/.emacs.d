@@ -7,7 +7,7 @@
     (dtk-toggle-split-caps t)
 
     ;; Tema de som
-    (emacspeak-sounds-select-theme "3d/")
+    (emacspeak-sounds-select-theme (concat emacspeak-sounds-directory "3d/"))
 
 
     ;; Atalhos de teclado
