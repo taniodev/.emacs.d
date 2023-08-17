@@ -15,6 +15,7 @@
 (require 'config-company)
 (require 'config-dap)
 (require 'config-flycheck)
+(require 'config-format-all)
 (require 'config-lsp)
 (require 'config-magit)
 (require 'config-navindent)

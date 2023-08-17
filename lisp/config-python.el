@@ -2,6 +2,7 @@
 
 (use-package python
   :hook (python-mode . (lambda ()
+    (setq-local format-all-formatters '(("Python" isort black)))
     (setq-local emacspeak-speak-messages nil)))
 
   :bind
@@ -21,21 +22,6 @@
   ;; Possibilita a ativação automática do ambiente virtual (.venv).
   :ensure t
   :hook (python-mode . auto-virtualenv-set-virtualenv)
-)
-
-(use-package py-isort
-  ;; Organizar os imports automaticamente
-  :ensure t
-  :hook (before-save . py-isort-before-save)
-)
-
-(use-package python-black
-  ;; Formatador automático
-  :ensure t
-  :after python
-  :custom
-  (python-black-command "blue")
-  :hook (python-mode . python-black-on-save-mode)
 )
 
 (use-package python-pytest
