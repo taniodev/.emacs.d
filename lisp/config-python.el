@@ -2,7 +2,7 @@
 
 (use-package python
   :hook (python-mode . (lambda ()
-    (setq-local format-all-formatters '(("Python" isort black)))
+    (setq-local format-all-formatters '(("Python" isort blue)))
     (setq-local emacspeak-speak-messages nil)))
 
   :bind
